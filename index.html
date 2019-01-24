@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="IE=edge" >
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+<title>Aliplayer在线配置</title>
+<link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.8.0/skins/default/aliplayer-min.css" />
+<script type="text/javascript" charset="utf-8" src="https://g.alicdn.com/de/prismplayer/2.8.0/aliplayer-min.js"></script>
+<style type="text/css">
+  .prism-player .prism-cover{
+    background-color:none;
+    display:block;
+  }
+  
+  .prism-player .prism-marker-text{
+    display:none;
+  }
+</style>
+</head>
+<body>
+<div class="prism-player" id="player-con"></div>
+<script>
+var player = new Aliplayer({
+  "id": "player-con",
+  "source": "https://live.zspbj.com/test/test.m3u8?auth_key=1548295431-0-0-5d675bf0aa767919637b0b9629091616",
+  "width": "100%",
+  "height": "500px",
+  "autoplay": true,
+  "isLive": true,
+  "rePlay": false,
+  "playsinline": true,
+  "preload": true,
+  "controlBarVisibility": "hover",
+  "useH5Prism": true
+}, function (player) {
+    console.log("播放器创建了。");
+  }
+);
+</script>
+</body>
